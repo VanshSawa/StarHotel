@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/1ad0e8fded.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+</style>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@300&display=swap');
+</style>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+
+  header {
+    width: 100%;
+    height: 7dvh;
+    background-color: rgb(255, 255, 255);
+    line-height: 40px;
+    display: flex;
+  }
+
+  #hero {
+    background-image: url(img/hero.jpg);
+    width: 100%;
+    height: 81.7dvh;
+    background-size: cover;
+  }
+
+  /* CSS for animation */
+  #demo {
+    opacity: 2;
+    transition: opacity 0.5s ease-in-out;
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+  }
+
+  #herotext {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    height: 81.7dvh;
+    display: flex;
+  }
+
+  #text1 {
+    color: #FFD43B;
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    display: flex;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 42.5%;
+  }
+</style>
+
+<style>
+  #calender1 {
+    width: 100%;
+    height: 300px;
+    background-color: #FFD43B;
+    display: flex;
+  }
+
+  #calender2 {
+    width: 70%;
+    height: 155px;
+    background-color: white;
+    margin: auto;
+  }
+
+  input[type="date"] {
+    padding: 15px;
+    border: 2px solid #FFD43B;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 90%;
+
+  }
+
+  input[type="search"] {
+    padding: 15px;
+    border: 2px solid #FFD43B;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 90%;
+  }
+
+  #dropdown {
+    background-color: #FFD43B;
+    color: black;
+    padding: 15px;
+    border: 2px solid #FFD43B;
+    border-radius: 20px;
+    font-size: 20px;
+    width: 90%;
+  }
+</style>
+
+<!-- this style is for row 2 -->
+<style>
+  #hero2 {
+    width: 100%;
+    height: 600px;
+    display: flex;
+  }
+
+  #hero21 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #hero21 h3,
+  h2,
+  p {
+    text-align: center;
+  }
+
+  #hero21 h3 {
+    color: #FFD43B;
+    font-family: 'Anton', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  #hero21 h2 {
+    color: black;
+    font-family: 'Anton', sans-serif;
+  }
+
+  #hero21 p {
+    color: silver;
+    padding-top: 10px;
+  }
+
+  #hero22 {
+    width: 50%;
+  }
+
+  #hero22 img {
+    margin-top: -50px;
+    margin-left: 20px;
+  }
+</style>
+
+<!-- this style is for row 3 -->
+<style>
+  #hero3 {
+    width: 100%;
+    background: #F9F8F8;
+    height: 80vh;
+    gap: 2%;
+    position: relative;
+  }
+
+  #hero3p {
+    width: 80%;
+    /* text-align: left; */
+    font-size: 25px;
+    font-family: 'Anton', sans-serif;
+    color: #FFD43B;
+  }
+
+  #hero3cards {
+    width: 80%;
+    margin: 0px;
+    gap: 10px;
+    overflow-x: scroll;
+  }
+
+  #card1,
+  #card2,
+  #card3,
+  #card4,
+  #card5,
+  #card6 {
+    flex-shrink: 0;
+    width: 32.5%;
+  }
+
+  #img1 {
+    height: 100%;
+  }
+</style>
+
+<!-- this style is for row4 -->
+<style>
+  #hero4 {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  #hero4 p{
+    text-align: justify;
+    color: grey;
+  }
+</style>
+
+<!-- this style is for row5 -->
+<style>
+  #row5 {
+    background: #F9F8F8;
+    position: relative;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: ce; */
+  }
+
+  #row5 h2 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 4px solid #FFD43B;
+    font-family: 'Anton';
+  }
+
+  #row51 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    opacity: 100;
+    transition: all 1s ease-in-out;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #row52 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: fit-content;
+    width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .row511 {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 5px;
+    height: fit-content;
+    background-color: white;
+    padding: 1rem;
+    color: black;
+    padding-top: 3rem;
+    position: relative;
+  }
+
+  #cardimg {
+    position: absolute;
+    top: 0px;
+    left: 45%;
+    transform: translate(0, -50%);
+    width: 50px;
+  }
+
+  .row511 p {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .row511 div {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    position: relative;
+  }
+
+  .row511 div h3 {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .row511 div img {
+    width: 100px;
+  }
+</style>
+
+<!-- this style is for row6 -->
+<style>
+  #hero6 {
+    height: 80vh;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+
+  #hero6 h1 {
+    font-weight: 400;
+    font-family: 'Anton', sans-serif;
+    color: #FFD43B;
+    text-decoration: underline;
+  }
+
+  #hero6row2 {
+    width: 100%;
+    height: 70%;
+    gap: 4%;
+  }
+
+  #hero61,
+  #hero62,
+  #hero63 {
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    width: 33.33%;
+  }
+
+  #hero61 p,
+  #hero62 p,
+  #hero63 p {
+    width: 80%;
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #hero61 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('img/gallery-4.jpg');
+    position: relative;
+    /* backdrop-filter: blur(12px); */
+  }
+
+  #hero61h2 {
+    top: 80%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #hero62 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('img/hr-1.jpg');
+    position: relative;
+  }
+
+  #hero62h2 {
+    top: 80%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+
+  #hero63 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/hr-3.jpg');
+    position: relative;
+  }
+
+  #hero63h2 {
+    top: 80%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+  }
+</style>
+
+<!-- this style is for row7 -->
+<style>
+  #hero7 {
+    background-image: url(img/chooseus-bg.jpg);
+    height: 50vh;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #hero7 h3 {
+    color: #FFD43B;
+    font-family: 'Anton';
+    text-align: center;
+    font-size: 20px;
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+
+  #hero7 h2 {
+    font-family: 'Anton';
+    text-align: center;
+    color: white;
+    width: 800px;
+    margin: auto;
+  }
+
+  #hero7 #btnn {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  #hero7 button {
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+</style>
+
+<!-- footer  -->
+<style>footer .main-footer{  padding: 20px 0;  background: #252525;}
+  footer ul{  padding-left: 0;  list-style: none;}
+  
+  /* Copy Right Footer */
+  .footer-copyright { background: #222; padding: 5px 0;}
+  .footer-copyright .logo {    display: inherit;}
+  .footer-copyright nav {    float: right;    margin-top: 5px;}
+  .footer-copyright nav ul {  list-style: none; margin: 0;  padding: 0;}
+  .footer-copyright nav ul li { border-left: 1px solid #505050; display: inline-block;  line-height: 12px;  margin: 0;  padding: 0 8px;}
+  .footer-copyright nav ul li a{  color: #969696;}
+  .footer-copyright nav ul li:first-child { border: medium none;  padding-left: 0;}
+  .footer-copyright p { color: #969696; margin: 2px 0 0;}
+  
+  /* Footer Top */
+  .footer-top{  background: #252525;  padding-bottom: 30px; margin-bottom: 30px;  border-bottom: 3px solid #222;}
+  
+  /* Footer transparent */
+  footer.transparent .footer-top, footer.transparent .main-footer{  background: transparent;}
+  footer.transparent .footer-copyright{ background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3) ;}
+  
+  /* Footer light */
+  footer.light .footer-top{ background: #f9f9f9;}
+  footer.light .main-footer{  background: #f9f9f9;}
+  footer.light .footer-copyright{ background: none repeat scroll 0 0 rgba(255, 255, 255, 0.3) ;}
+  
+  /* Footer 4 */
+  .footer- .logo {    display: inline-block;}
+  
+  /*==================== 
+    Widgets 
+  ====================== */
+  .widget{  padding: 20px;  margin-bottom: 40px;}
+  .widget.widget-last{  margin-bottom: 0px;}
+  .widget.no-box{ padding: 0; background-color: transparent;  margin-bottom: 40px;
+    box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none; -ms-box-shadow: none; -o-box-shadow: none;}
+  .widget.subscribe p{  margin-bottom: 18px;}
+  .widget li a{ color: #FFD43B;}
+  .widget li a:hover{ color: #4b92dc;}
+  .widget-title {margin-bottom: 20px;}
+  .widget-title span {background: #839FAD none repeat scroll 0 0;display: block; height: 1px;margin-top: 25px;position: relative;width: 20%;}
+  .widget-title span::after {background: inherit;content: "";height: inherit;    position: absolute;top: -4px;width: 50%;}
+  .widget-title.text-center span,.widget-title.text-center span::after {margin-left: auto;margin-right:auto;left: 0;right: 0;}
+  .widget .badge{ float: right; background: #7f7f7f;}
+  
+  .typo-light h1, 
+  .typo-light h2, 
+  .typo-light h3, 
+  .typo-light h4, 
+  .typo-light h5, 
+  .typo-light h6,
+  .typo-light p,
+  .typo-light div,
+  .typo-light span,
+  .typo-light small{  color: #fff;}
+  
+  ul.social-footer2 { margin: 0;padding: 0; width: auto;}
+  ul.social-footer2 li {display: inline-block;padding: 0;}
+  ul.social-footer2 li a:hover {background-color:#FFD43B;}
+  ul.social-footer2 li a {display: block; height:30px;width: 30px;text-align: center;}
+  .btn{background-color: #FFD43B; color:#fff;}
+  .btn:hover, .btn:focus, .btn.active {background: #4b92dc;color: #fff;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -ms-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  -webkit-transition: all 250ms ease-in-out 0s;
+  -moz-transition: all 250ms ease-in-out 0s;
+  -ms-transition: all 250ms ease-in-out 0s;
+  -o-transition: all 250ms ease-in-out 0s;
+  transition: all 250ms ease-in-out 0s;
+  
+  }</style>
+
+<!-- media -->
+<style>
+  @media (max-width: 1100px) {
+    #text1 {
+      color: #FFD43B;
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      font-size: 50px;
+      margin-left: 300px;
+      margin-top: 100px;
+    }
+
+    #demo {
+      font-size: 35px;
+    }
+
+    #calender1 {
+      width: 100%;
+      height: 850px;
+      background-color: #FFD43B;
+    }
+
+    #calender2 {
+      width: 70%;
+      height: 650px;
+      background-color: white;
+      margin: auto;
+    }
+
+    input[type="date"] {
+      padding: 15px;
+      border: 2px solid #FFD43B;
+      border-radius: 20px;
+      font-size: 30px;
+      width: 90%;
+      margin-top: 10px;
+    }
+
+    input[type="search"] {
+      padding: 15px;
+      border: 2px solid #FFD43B;
+      border-radius: 20px;
+      font-size: 30px;
+      width: 90%;
+      margin-top: 10px;
+    }
+
+    #calender3 {
+      flex-direction: column;
+    }
+
+    #Location {
+      font-size: 30px;
+    }
+
+    #dropdown {
+      background-color: #FFD43B;
+      color: black;
+      padding: 15px;
+      border: 2px solid #FFD43B;
+      border-radius: 20px;
+      font-size: 30px;
+      width: 90%;
+    }
+
+    #hero2 {
+      width: 100%;
+      height: 600px;
+    }
+
+    #hero21 {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #hero21 h3,
+    h2,
+    p {
+      text-align: center;
+    }
+
+    #hero21 h3 {
+      color: #FFD43B;
+      font-family: 'Anton', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    #hero21 h2 {
+      color: black;
+      font-family: 'Anton', sans-serif;
+    }
+
+    #hero21 p {
+      color: silver;
+      padding-top: 10px;
+      font-size: 20px;
+    }
+
+    #hero22 {
+      width: 50%;
+    }
+
+    #hero22 img {
+      margin-top: -50px;
+      margin-left: 20px;
+      width: 80%;
+    }
+
+    /* ============================ */
+    #hero3 {
+      width: 100%;
+      background: #F9F8F8;
+      height: 80vh;
+      gap: 2%;
+      position: relative;
+    }
+
+    #hero3p {
+      width: 80%;
+      /* text-align: left; */
+      font-size: 25px;
+      font-family: 'Anton', sans-serif;
+      color: #FFD43B;
+    }
+
+    #hero3cards {
+      width: 80%;
+      margin: 0px;
+      gap: 10px;
+      overflow-x: scroll;
+    }
+
+    #card1,
+    #card2,
+    #card3,
+    #card4,
+    #card5,
+    #card6 {
+      flex-shrink: 0;
+      width: 80%;
+    }
+
+    #img1 {
+      height: 100%;
+    }
+
+    /* ====================== */
+
+    #hero6 {
+      height: 50vh;
+      width: 90%;
+      margin: auto;
+      justify-content: space-evenly;
+    }
+
+    #hero6 h1 {
+      font-weight: 400;
+      font-family: 'Anton', sans-serif;
+      color: #FFD43B;
+      text-decoration: underline;
+    }
+
+    #hero6row2 {
+      width: 100%;
+      height: 70%;
+      gap: 1%;
+    }
+
+    #hero61,
+    #hero62,
+    #hero63 {
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transition: all 0.5s ease-in-out;
+      width: 33.33%;
+    }
+
+    #hero61 p,
+    #hero62 p,
+    #hero63 p {
+      width: 80%;
+      transition: all .5s ease-in-out;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+    }
+
+    #hero61 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('img/gallery-4.jpg');
+      position: relative;
+      /* backdrop-filter: blur(12px); */
+      background-size: cover;
+    }
+
+    #hero61h2 {
+      top: 80%;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hero62 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('img/hr-1.jpg');
+      position: relative;
+      background-size: cover;
+    }
+
+    #hero62h2 {
+      top: 80%;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hero63 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/hr-3.jpg');
+      position: relative;
+      background-size: cover;
+    }
+
+    #hero63h2 {
+      top: 80%;
+      position: absolute;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .row511 {
+      width: 80%;
+    }
+
+    #row51 .row511 h3 {
+      padding-left: 10%;
+    }
+
+    #row52 .row511 h3 {
+      padding-left: 10%;
+    }
+
+    #row51 .row511:nth-child(2) {
+      display: none;
+    }
+
+    #row51 .row511:nth-child(3) {
+      display: none;
+    }
+
+    #row52 .row511:nth-child(2) {
+      display: none;
+    }
+
+    #row52 .row511:nth-child(3) {
+      display: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+    #hero {
+      background-image: url(img/gallery-2.jpg);
+      width: 100%;
+      height: 81.7dvh;
+      background-size: cover;
+    }
+
+    #text1 {
+      color: #FFD43B;
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+      font-size: 25px;
+      margin-left: 100px;
+      margin-top: 100px;
+    }
+
+    #demo {
+      font-size: 25px;
+    }
+
+    header {
+      display: none;
+    }
+
+    #calender1 {
+      width: 100%;
+      height: 650px;
+      background-color: #FFD43B;
+    }
+
+    #calender2 {
+      width: 95%;
+      height: 570px;
+      background-color: white;
+      margin: auto;
+      border-radius: 30px;
+    }
+
+    input[type="date"] {
+      padding: 15px;
+      border: 2px solid #FFD43B;
+      border-radius: 20px;
+      font-size: 15px;
+      width: 140%;
+      margin-top: 10px;
+      margin-left: -30px;
+      margin-bottom: 20px;
+    }
+
+    input[type="search"] {
+      padding: 10px;
+      border: 2px solid #FFD43B;
+      border-radius: 20px;
+      font-size: 20px;
+      width: 140%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      margin-left: -30px;
+    }
+
+    #calender3 {
+      flex-direction: column;
+    }
+
+    #Location {
+      font-size: 15px;
+    }
+
+    #dropdown {
+      background-color: #FFD43B;
+      color: black;
+      padding: 15px;
+      border: 2px solid #FFD43B;
+      border-radius: 20px;
+      font-size: 15px;
+      width: 140%;
+      margin-left: -30px;
+      margin-bottom: 50px;
+    }
+
+    #hero2 {
+      width: 100%;
+      height: 1250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    #hero21 {
+      width: 100%;
+    }
+
+    #hero21 h3 {
+      color: #FFD43B;
+      font-family: 'Anton', sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+    }
+
+    #hero21 h2 {
+      color: black;
+      font-family: 'Anton', sans-serif;
+    }
+
+    #hero21 p {
+      color: silver;
+      padding-top: 10px;
+      width: 350px;
+      padding-left: 65px;
+      padding: auto;
+    }
+
+    #hero22 {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #hero22 img {
+      width: 90%;
+      margin-left: -20px;
+    }
+
+    /* ============================ */
+    #hero3 {
+      width: 100%;
+      background: #F9F8F8;
+      height: 80vh;
+      gap: 2%;
+      position: relative;
+    }
+
+    #hero3p {
+      width: 80%;
+      /* text-align: left; */
+      font-size: 25px;
+      font-family: 'Anton', sans-serif;
+      color: #FFD43B;
+    }
+
+    #hero3cards {
+      width: 80%;
+      margin: 0px;
+      gap: 10px;
+      overflow-x: scroll;
+    }
+
+    #card1,
+    #card2,
+    #card3,
+    #card4,
+    #card5,
+    #card6 {
+      flex-shrink: 0;
+      width: 80%;
+    }
+
+    #img1 {
+      height: 100%;
+    }
+
+    #hero4 p{
+      text-align: left;
+      font-size: 14px;
+    }
+
+    /* ====================== */
+
+    #hero6 {
+      height: 120vh;
+      width: 100%;
+      margin: auto;
+      justify-content: space-evenly;
+    }
+
+    #hero6 h1 {
+      font-weight: 400;
+      font-family: 'Anton', sans-serif;
+      color: #FFD43B;
+      text-decoration: underline;
+    }
+
+    #hero6row2 {
+      width: 100%;
+      height: 70%;
+      gap: 3%;
+      flex-direction: column;
+    }
+
+    #hero61,
+    #hero62,
+    #hero63 {
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      transition: all 0.5s ease-in-out;
+      width: 90%;
+      margin: auto;
+    }
+
+    #hero61 p,
+    #hero62 p,
+    #hero63 p {
+      width: 80%;
+      position: static;
+      opacity: 100;
+      transition: all 0.5s ease-in-out;
+    }
+
+    #hero61 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('img/gallery-4.jpg');
+      position: relative;
+      background-size: cover;
+    }
+
+    #hero61h2 {
+      position: static;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hero62 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('img/hr-1.jpg');
+      position: relative;
+      background-size: cover;
+    }
+
+    #hero62h2 {
+      position: static;
+      transition: all 0.3s ease-in-out;
+    }
+
+    #hero63 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('img/hr-3.jpg');
+      position: relative;
+      background-size: cover;
+    }
+
+    #hero63h2 {
+      position: static;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .row511 {
+      width: 80%;
+    }
+
+    #row51 .row511 h3 {
+      padding-left: 10%;
+    }
+
+    #row52 .row511 h3 {
+      padding-left: 10%;
+    }
+
+    #row51 .row511:nth-child(2) {
+      display: none;
+    }
+
+    #row51 .row511:nth-child(3) {
+      display: none;
+    }
+
+    #row52 .row511:nth-child(2) {
+      display: none;
+    }
+
+    #row52 .row511:nth-child(3) {
+      display: none;
+    }
+
+    #hero7 {
+      background-image: url(img/chooseus-bg.jpg);
+      height: 40vh;
+      width: 100%;
+      background-repeat: no-repeat;
+    }
+
+    #hero7 h3 {
+      color: #FFD43B;
+      font-family: 'Anton';
+      text-align: center;
+      font-size: 20px;
+      padding-top: 80px;
+      padding-bottom: 30px;
+    }
+
+    #hero7 h2 {
+      font-family: 'Anton';
+      text-align: center;
+      color: white;
+      width: 400px;
+      margin: auto;
+    }
+
+    #hero7 #btnn {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    #hero7 button {
+      color: black;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+</style>
+
+<body>
+  <header>
+    <div class="d-flex justify-content-between container-md">
+      <div class="d-flex justify-content-center align-items-center">
+        <p style="margin: 0;"><i class="fa-solid fa-location-dot" style="color: #FFD43B;"></i>&nbsp; 96 Ernser Vista
+          Suite 437, NY, US &nbsp;&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-phone" style="color: #FFD43B;"></i>
+          &nbsp;(123) 456-78-910</p>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <p style="margin: 0;"><i class="fa-solid fa-right-to-bracket" style="color: #FFD43B;"></i> &nbsp;Login
+          &nbsp;|&nbsp; Register &nbsp;<i class="fa-regular fa-registered" style="color: #FFD43B;"></i></p>
+      </div>
+    </div>
+  </header>
+  <div>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand ms-5" href="#" style="font-size: 30px;"><i class="fa-solid fa-location-dot"
+            style="color: #FFD43B; font-size: 30px;"></i>&nbsp; STAR HOTEL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                style="color: #FFD43B; font-size: 20px; padding: 20px;">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-size: 20px; padding: 20px;">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-size: 20px; padding: 20px;">About us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                style="font-size: 20px; padding: 20px;">
+                Pages
+              </a>
+              <ul class="dropdown-menu" style="background-color: #FFD43B;">
+                <li><a class="dropdown-item" href="#" style="color: black;">About Us</a></li>
+                <li><a class="dropdown-item" href="#" style="color: black;">Room Details</a></li>
+                <li><a class="dropdown-item" href="#" style="color: black;">Blog Details</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-size: 20px; padding: 20px;">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="font-size: 20px; padding: 20px;">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                style="font-size: 20px; background-color: white; color: black; padding: 20px;">Book Now &nbsp;<i
+                  class="fa-solid fa-arrow-right" style="color: #FFD43B;"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="hero">
+    <span id="text1">WELCOME STAR HOTELS</span>
+    <div id="herotext" class="justify-content-center align-items-center">
+      <span id="demo"></span>
+    </div>
+  </div>
+  <div id="calender1">
+    <div id="calender2">
+      <div class="d-flex  align-items-center" style="height: 155px;" id="calender3">
+        <div class="p-2 w-50" id="Location">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fa-solid fa-location-dot" style="color: black;"></i>&nbsp;Location&nbsp;
+          <br><input type="search">
+        </div>
+        <div class="p-2 w-50" id="Location">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fa-solid fa-check-to-slot"></i>&nbsp;Check In &nbsp;
+          <br><input type="date">
+        </div>
+        <div class="p-2 w-50" id="Location">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i
+            class="fa-solid fa-square-xmark"></i>&nbsp;Check
+          Out &nbsp; <br><input type="date"></div>
+        <div class="p-2 w-50">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div
+            class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false" id="dropdown">
+              Person
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">2 Adult, 1 Children</a></li>
+              <li><a class="dropdown-item" href="#">2 Adult</a></li>
+              <li><a class="dropdown-item" href="#">1 Adult</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="p-2 flex-shrink-1" style="background-color: black; height: 155px;"><a href="#"
+            style=" color: #FFD43B; text-decoration: none; font-size: 20px;">BOOK NOW</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="hero2">
+    <div id="hero21">
+      <h3>ABOUT US</h3>
+      <h2>WELCOME TO STAR HOTRELS PRIVATE LIMITED</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, cupiditate repellendus vitae, voluptate
+        dignissimos eius magni autem minima doloribus similique laboriosam. Sequi dolore sint culpa. Vitae laboriosam
+        totam debitis eligendi necessitatibus porro provident quis, aperiam voluptas natus sint. Quibusdam, magnam quos?
+        Ipsam maxime porro provident dolore autem repellat animi dolor!</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde est sit voluptas consectetur nulla earum natus at
+        suscipit tenetur voluptates soluta, quisquam recusandae dicta aspernatur.</p>
+    </div>
+    <br>
+    <br>
+    <div id="hero22"><img src="img/home-about.png" alt=""></div>
+  </div>
+
+  <div id="hero3" class="d-flex flex-column align-items-center justify-content-center">
+
+    <h2 style="width: 80%;font-weight: 400;font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;" id="hero3h">Our Services</h2>
+
+    <p id="hero3p">
+      The concept and service of the best luxury hotels <br>
+      in Asturias in our sophisticated.
+    </p>
+
+    <div class="d-flex" id="hero3cards">
+
+      <div class="card text-bg-dark" id="card1">
+        <img src="img/gallery-1.jpg" class="card-img" alt="..." id="img1">
+        <div class="card-img-overlay  d-flex justify-content-end flex-column align-items-left ps-4"
+          style="padding: 0px;">
+          <h5 class="card-title fs-2">Party Pool</h5>
+          <p class="" style="font-family: 'Jost', sans-serif;"> 2 Adults 1 Child <br> Started from <span
+              class="fs-4">500$</span> </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark" id="card2">
+        <img src="img/gallery-2.jpg" class="card-img" alt="..." id="img1">
+        <div class="card-img-overlay  d-flex justify-content-end flex-column align-items-left ps-4"
+          style="padding: 0px;">
+          <h5 class="card-title fs-2">Couple Room</h5>
+          <p class="" style="font-family: 'Jost', sans-serif;"> 2 Adults 1 Child <br> Started from <span
+              class="fs-4">500$</span> </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark" id="card3">
+        <img src="img/gallery-3.jpg" class="card-img" alt="..." id="img1">
+        <div class="card-img-overlay  d-flex justify-content-end flex-column align-items-left ps-4"
+          style="padding: 0px;">
+          <h5 class="card-title fs-2">International Cousines</h5>
+          <p class="" style="font-family: 'Jost', sans-serif;"> 2 Adults 1 Child <br> Started from <span
+              class="fs-4">500$</span> </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark" id="card4">
+        <img src="img/gallery-4.jpg" class="card-img" alt="..." id="img1">
+        <div class="card-img-overlay  d-flex justify-content-end flex-column align-items-left ps-4"
+          style="padding: 0px;">
+          <h5 class="card-title fs-2">Boardwalk</h5>
+          <p class="" style="font-family: 'Jost', sans-serif;"> 2 Adults 1 Child <br> Started from <span
+              class="fs-4">500$</span> </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark" id="card5">
+        <img src="img/hr-1.jpg" class="card-img" alt="..." id="img1">
+        <div class="card-img-overlay  d-flex justify-content-end flex-column align-items-left ps-4"
+          style="padding: 0px;">
+          <h5 class="card-title fs-2">Couple Room</h5>
+          <p class="" style="font-family: 'Jost', sans-serif;"> 2 Adults 1 Child <br> Started from <span
+              class="fs-4">500$</span> </p>
+        </div>
+      </div>
+
+      <div class="card text-bg-dark" id="card6">
+        <img src="img/testimonial-left.jpg" class="card-img" alt="..." id="img1">
+        <div class="card-img-overlay  d-flex justify-content-end flex-column align-items-left ps-4"
+          style="padding: 0px;">
+          <h5 class="card-title fs-2">Co-Operative Staff</h5>
+          <p class="" style="font-family: 'Jost', sans-serif;"> 2 Adults 1 Child <br> Started from <span
+              class="fs-4">500$</span> </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="hero4">
+    <div id="row41">
+      <div class="d-flex" style="margin-bottom: 20px; margin-top: 10px;">
+        <div class="p-2 flex-fill" style="width: 33%;"><img src="img/services-1.png" alt="" style="width: 50px;">
+          <h3 style="font-family: 'Anton', sans-serif; ">Free Wifi</h3>
+          <p>The massive investment in a hotel or resort requires constant
+            reviews and control in order to make it a successful investment.</p>
+        </div>
+        <div class="p-2 flex-fill" style="width: 33%;"><img src="img/services-2.png" alt="" style="width: 50px;">
+          <h3 style="font-family: 'Anton', sans-serif;    ">Premium Pool</h3>
+          <p>Choose from 4 unique ready made concepts, let us help you create
+            the concept perfect for you or let HCA.</p>
+        </div>
+        <div class="p-2 flex-fill" style="width: 33%;"><img src="img/services-3.png" alt="" style="width: 50px;">
+          <h3 style="font-family: 'Anton', sans-serif;    ">Coffee Maker</h3>
+          <p>HCA's Owner's Representation is taking care of just these
+            important factors, may it be through regular site visits and spot checks.</p>
+        </div>
+      </div>
+    </div>
+    <div id="row42">
+      <div class="d-flex">
+        <div class="p-2 flex-fill" style="width: 33%;"><img src="img/services-4.png" alt="" style="width: 50px;">
+          <h3 style="font-family: 'Anton', sans-serif;    ">Bar Wine</h3>
+          <p>For properties with third party management companies, HCA
+            Consultants will as well administer the terms and conditions.</p>
+        </div>
+        <div class="p-2 flex-fill" style="width: 33%;"><img src="img/services-5.png" alt="" style="width: 50px;">
+          <h3 style="font-family: 'Anton', sans-serif;  ">TV HD</h3>
+          <p>We provide a critical analysis of a hotel's marketing strategy,
+            bench-marking it against industry and competitive practices.</p>
+        </div>
+        <div class="p-2 flex-fill" style="width: 33%;"><img src="img/services-6.png" alt="" style="width: 50px;">
+          <h3 style="font-family: 'Anton', sans-serif; ">Restaurant</h3>
+          <p>A hotel and restaurant investment deserves careful and market
+            oriented financial planning and projections.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="row5">
+
+    <h2 style="position: absolute;">Our Reviews</h2>
+
+    <div id="row51">
+
+      <div class="row511">
+
+        <img src="img/2.jpg" alt="" id="cardimg">
+
+        <p>Exceptional dining experience! The flavors were a symphony, each dish a masterpiece. Impeccable service and a
+          cozy ambiance made our evening unforgettable.</p>
+        <div>
+          <img src="img/1.jpg" alt="">
+          <h3>Emily Hale</h3>
+        </div>
+      </div>
+
+
+      <div class="row511">
+
+        <img src="img/2.jpg" alt="" id="cardimg">
+
+        <p>A culinary delight! The diverse menu caters to every palate. Fresh, high-quality ingredients shine in every
+          bite. Attentive staff and a warm atmosphere complete the perfect dining equation.</p>
+        <div>
+          <img src="img/3.jpg" alt="">
+          <h3>Kelly</h3>
+        </div>
+      </div>
+
+
+      <div class="row511">
+
+        <img src="img/2.jpg" alt="" id="cardimg">
+
+        <p>5-star gem! From the appetizers to desserts, every dish was a revelation. A tasteful blend of creativity and
+          tradition. The staff's knowledge and enthusiasm added to the overall enjoyment.</p>
+        <div>
+          <img src="img/4.jpg" alt="">
+          <h3>Mario Suarez</h3>
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <div id="row52">
+
+      <div class="row511">
+
+        <img src="img/2.jpg" alt="" id="cardimg">
+
+        <p>Mouthwatering perfection! Each course was a delightful surprise. The chef's dedication to quality and
+          presentation was evident. Friendly staff and a charming atmosphere made for a delightful evening.</p>
+        <div>
+          <img src="img/5.jpg" alt="">
+          <h3>Rafael Smith</h3>
+        </div>
+      </div>
+
+
+      <div class="row511">
+
+        <img src="img/2.jpg" alt="" id="cardimg">
+
+        <p>A gastronomic journey! Exquisite flavors, expertly crafted dishes, and an extensive wine selection. The
+          ambiance is refined, and the attentive service enhances the overall dining experience.</p>
+        <div>
+          <img src="img/6.jpg" alt="">
+          <h3>Lisa Karera</h3>
+        </div>
+      </div>
+
+
+      <div class="row511">
+
+        <img src="img/2.jpg" alt="" id="cardimg">
+
+        <p>Foodie's paradise! The menu showcases a fusion of flavors that are both adventurous and comforting. The
+          attentive staff and stylish decor elevate the overall dining experience.</p>
+        <div>
+          <img src="img/1.jpg" alt="">
+          <h3>Kelly</h3>
+        </div>
+      </div>
+
+    </div>
+
+
+  </div>
+
+  <div id="hero6" class="d-flex flex-column align-items-center">
+
+    <div id="hero6row1">
+      <h1>What We Offer.</h1>
+    </div>
+
+    <div class="d-flex" id="hero6row2">
+
+      <div id="hero61">
+        <h2 id="hero61h2">Drinks</h2>
+
+        <p id="hero61p">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double
+          and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft
+          and Unique Junior Loft Suite.</p>
+      </div>
+
+      <div id="hero62">
+        <h2 id="hero62h2">Breakfast</h2>
+
+        <p id="hero62p">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double
+          and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft
+          and Unique Junior Loft Suite.</p>
+      </div>
+
+      <div id="hero63">
+        <h2 id="hero63h2">Dinner</h2>
+
+        <p id="hero63p">The concept and service of the best luxury hotels in Asturias in our sophisticated Urban Double
+          and Unique Junior Suite rooms, with the possibility of enjoying a furnished terrace in our Double Urban Loft
+          and Unique Junior Loft Suite.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="hero7">
+    <h3>WHY CHOOSE US.</h3>
+    <h2>Contact us now to get the latest deals and for the next booking</h2>
+    <div id="btnn"><button>Booking Now</button></div>
+  </div>
+
+  <footer id="footer" class="footer-1">
+    <div class="main-footer widgets-dark typo-light">
+    <div class="container">
+    <div class="row">
+      
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget subscribe no-box">
+    <h5 class="widget-title">STAR HOTELS<span></span></h5>
+    <p>Your unforgettable getaway starts here.</p>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget no-box">
+    <h5 class="widget-title">Quick Links<span></span></h5>
+    <ul class="thumbnail-widget">
+    <li>
+    <div class="thumb-content"><a href="#.">Get Started</a></div> 
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">Top Leaders</a></div> 
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">Success Stories</a></div> 
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">Event/Tickets</a></div> 
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">News</a></div>  
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">Lifestyle</a></div> 
+    </li>
+    <li>
+    <div class="thumb-content"><a href="#.">About</a></div> 
+    </li>
+    </ul>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    <div class="widget no-box">
+    <h5 class="widget-title">Get Started<span></span></h5>
+    <p>Get access to your full Training and Marketing Suite.</p>
+    <a class="btn" href="https://bit.ly/3m9avif" target="_blank">Subscribe Now</a>
+    </div>
+    </div>
+    
+    <div class="col-xs-12 col-sm-6 col-md-3">
+    
+    <div class="widget no-box">
+    <h5 class="widget-title">Contact Us<span></span></h5>
+    
+    <p><a href="mailto:info@domain.com" title="glorythemes" style="color: white;">StarHotel@domain.com</a></p>
+    <ul class="social-footer2">
+    <li class=""><a title="youtube" target="_blank" href="https://bit.ly/3m9avif"><img alt="youtube" width="30" height="30" src="data:image/png;base64,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"></a></li>
+    <li class=""><a href="https://www.facebook.com/" target="_blank" title="Facebook"><img alt="Facebook" width="30" height="30" src="data:image/png;base64,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"></a></li>
+    <li class=""><a href="https://twitter.com" target="_blank" title="Twitter"><img alt="Twitter" width="30" height="30" src="data:image/png;base64,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"></a></li>
+    <li class=""><a title="instagram" target="_blank" href="https://www.instagram.com/"><img alt="instagram" width="30" height="30" src="data:image/png;base64,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"></a></li>
+    </ul>
+    </div>
+    </div>
+    
+    </div>
+    </div>
+    </div>
+      
+    <div class="footer-copyright">
+    <div class="container">
+    <div class="row">
+    <div class="col-md-12 text-center">
+    <p>Copyright Company Name © 2024. All rights reserved.</p>
+    </div>
+    </div>
+    </div>
+    </div>
+    </footer>
+
+  <script>
+    var lines = [
+      "Hotel rooms inhabit a separate moral universe.",
+      "The room is not the place to rest your head.",
+      "The great advantage of a hotel is that it is a refuge from home life.",
+      "My definition of a good hotel is a place I'd stay at."
+    ];
+    var lineIndex = 0;
+    var charIndex = 0;
+    var speed = 80;
+    var isDeleting = false;
+
+    function typeWriter() {
+      var line = lines[lineIndex];
+
+      if (!isDeleting && charIndex <= line.length) {
+        document.getElementById("demo").innerHTML = line.substring(0, charIndex);
+        charIndex++;
+        setTimeout(typeWriter, speed);
+      } else if (isDeleting && charIndex >= 0) {
+        document.getElementById("demo").innerHTML = line.substring(0, charIndex);
+        charIndex--;
+        setTimeout(typeWriter, speed / 2);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) {
+          lineIndex = (lineIndex + 1) % lines.length;
+        }
+        setTimeout(typeWriter, speed / 2);
+      }
+    }
+
+    // Call the typeWriter function when the page loads
+    window.onload = function () {
+      typeWriter();
+    };
+  </script>
+
+  <script>
+
+    let row5 = document.querySelector('#row5');
+    let row51 = document.querySelector('#row51');
+    let row52 = document.querySelector('#row52');
+    let row511 = document.querySelectorAll('.row511');
+
+    disappear = (name) => {
+      name.style.opacity = '0';
+    }
+
+    appear = (name) => {
+      name.style.opacity = '100';
+    }
+
+    flag = true;
+
+    setInterval(() => {
+
+      if (flag) {
+        appear(row52);
+        disappear(row51);
+        flag = false;
+      }
+
+      else {
+        appear(row51);
+        disappear(row52);
+        flag = true;
+      }
+
+    }, 4000);
+
+  </script>
+
+  <script>
+    function handleHero(heroId, image, h2Id, pId) {
+      let hero = document.querySelector(`#${heroId}`);
+      let heroH2 = document.querySelector(`#${h2Id}`);
+      let heroP = document.querySelector(`#${pId}`);
+
+      hero.addEventListener('mouseover', () => {
+        if (window.innerWidth > 1000) {
+          heroH2.style.top = '20%';
+          heroP.style.opacity = "4";
+          hero.style.backgroundImage = linear - gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('${image}');
+          hero.style.transform = 'scale(1.1)';
+        }
+      });
+
+      hero.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 1000) {
+          heroH2.style.top = '80%';
+          heroP.style.opacity = "0";
+          hero.style.backgroundImage = linear - gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)), url('${image}');
+          hero.style.transform = 'scale(1)';
+        }
+      });
+    }
+
+
+    handleHero('hero61', 'img/gallery-4.jpg', 'hero61h2', 'hero61p');
+    handleHero('hero62', 'img/hr-1.jpg', 'hero62h2', 'hero62p');
+    handleHero('hero63', 'img/hr-3.jpg', 'hero63h2', 'hero63p');
+  </script>
+
+</body>
+
+</html>
