@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>StarHotels</title>
+  <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://kit.fontawesome.com/1ad0e8fded.js" crossorigin="anonymous"></script>
@@ -18,10 +18,6 @@
 </style>
 
 <style>
-  body,html{
-    overflow-x: hidden; 
-  }
-  
   * {
     margin: 0;
     padding: 0;
@@ -227,8 +223,7 @@
     height: 70vh;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* align-items: ce; */
+   min-height: 530px;
   }
 
   #row5 h2 {
@@ -248,7 +243,7 @@
     position: absolute;
     opacity: 100;
     transition: all 1s ease-in-out;
-    top: 50%;
+    top: max(50%, 300px);
     transform: translateY(-50%);
   }
 
@@ -261,7 +256,7 @@
     position: absolute;
     opacity: 0;
     transition: all 1s ease-in-out;
-    top: 50%;
+    top: max(50%, 300px);
     transform: translateY(-50%);
   }
 
@@ -320,6 +315,7 @@
     width: 80%;
     margin: auto;
     justify-content: space-evenly;
+    min-height: 600px;
   }
 
   #hero6 h1 {
